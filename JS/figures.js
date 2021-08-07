@@ -88,7 +88,7 @@ function heigth_triangle_calculator(){
     const hightles_value = Math.max.apply(null, values) 
     const lowes_value = Math.min.apply(null, values) 
 
-    if (values[0] == values[1] + values[2]){
+    if (values[0] == values[1] || values[1] == values[2] || values[2] == values[0]){
         alert("Triangle height is = " + height_triangle_equilater(values[0]))
     }
     else{

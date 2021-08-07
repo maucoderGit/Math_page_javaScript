@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
     <link rel="stylesheet" href="CSS/styles.css">
     <title>Geometrics figures</title>
 </head>
 <body>
+    <div class="container">
     <header class="header">    
         <h1 class="header__title">
             Geometric figures
@@ -37,7 +38,6 @@
                 <label for="input_triangle_calculator_foot">
                     Write measures of triangle
                 </label>
-            <div class="section__form--content">
                 <input type="number" placeholder="foot..." id="input_triangle_calculator_foot"/> 
                 <input type="number" placeholder="side1..." id="input_triangle_calculator_side1"/>
                 <input type="number" placeholder="side2..." id="input_triangle_calculator_side2"/>
@@ -51,7 +51,6 @@
                 <button type="button" onclick="heigth_triangle_calculator()">
                     Heigth
                 </button>
-            </div>
         </form>
         
         <form class="section__form">
@@ -67,7 +66,9 @@
                 Area
             </button>
         </form>
-
+    </section>
+    </div>
+    
     <script src="JS/figures.js"></script>
 </body>
 </html>
