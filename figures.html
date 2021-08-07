@@ -4,26 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/styles.css">
     <title>Geometrics figures</title>
 </head>
 <body>
     <header class="header">    
-        <h1>
+        <h1 class="header__title">
             Geometric figures
-        </h1>
+        </h1>  
+    </header>
+
+    <section class="section">
         <p>
             Este es el primer taller del curso práctico de JavaScript
         </p>
-    </header>
-
-
-    <section class="section">
         <h2>Square calculator</h2>
         <form class="section__form">
             <label for="input_square_calculator">
                 Write each side measures of square
             </label>
-            <input type="number" id="input_square_calculator"/>
+            <input type="number" placeholder="sides..." id="input_square_calculator"/>
             <button type="button" onclick="perimeter_square_calculator()">
                 Perimeter
             </button>
@@ -31,7 +31,37 @@
                 Area
             </button>
         </form>
-    </section>
+
+        <h2>Triangle calculator</h2>
+        <form class="section__form">
+            <label for="input_triangle_calculator_foot">
+                Write measures of triangle
+            </label>
+            <input type="number" placeholder="foot..." id="input_triangle_calculator_foot"/> 
+            <input type="number" placeholder="side1..." id="input_triangle_calculator_side1"/>
+            <input type="number" placeholder="side2..." id="input_triangle_calculator_side2"/>
+            <input type="number" placeholder="heigth..." id="input_triangle_calculator_height"/>
+            <button type="button" onclick="perimeter_triangle_calculator()">
+                Perimeter
+            </button>
+            <button type="button" onclick="area_triangle_calculator()">
+                Area
+            </button>
+        </form>
+        
+        <form class="section__form">
+            <h2>Circle calculator</h2>
+            <label for="input_circle_radium">
+                Write measures of triangle
+            </label>
+            <input type="number" placeholder="Radium" id="input_circle_radium"/> 
+            <button type="button" onclick="circunference_circle_calculator()">
+                Circunference
+            </button>
+            <button type="button" onclick="area_circle_calculator()">
+                Area
+            </button>
+        </form>
 
     <script src="JS/figures.js"></script>
 </body>
