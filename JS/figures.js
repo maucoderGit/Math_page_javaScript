@@ -4,6 +4,11 @@ const square_perimeter = (sides) => sides * 4;
 const triangle_perimeter = (side_base, side_left, side_right) => side_base + side_left + side_right;
 const circle_perimeter = (circle_radium) => PI * circle_radium * 2 
 
+// height isosceles triangle
+
+const height_triangle_equilater = (sides) => Math.sqrt(3 * sides / 2)
+const height_triangle_isosceles = (long_side, short_side) => Math.sqrt(long_side**2 - (short_side / 2)**2);
+
 const square_area = (side) => side**2
 const triangle_area = (side_base, triangle_height) => (side_base * triangle_height) / 2 
 const circle_area = (circle_radium) =>(circle_radium ** 2) * PI
@@ -71,4 +76,22 @@ function area_circle_calculator(){
     const value = input.value;
 
     alert(circle_area(value))
+}
+
+function heigth_triangle_calculator(){
+    const input0 = document.getElementById("input_triangle_calculator_foot")
+    const input1 = document.getElementById("input_triangle_calculator_side1")
+    const input2 = document.getElementById("input_triangle_calculator_side2")
+
+    const values = [input0.value, input1.value, input2.value]
+
+    const hightles_value = Math.max.apply(null, values) 
+    const lowes_value = Math.min.apply(null, values) 
+
+    if (values[0] == values[1] + values[2]){
+        alert("Triangle height is = " + height_triangle_equilater(values[0]))
+    }
+    else{
+        alert("Triangle height is = " + height_triangle_isosceles(hightles_value, lowes_value))
+    }
 }

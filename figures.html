@@ -18,8 +18,8 @@
         <p>
             Este es el primer taller del curso práctico de JavaScript
         </p>
-        <h2>Square calculator</h2>
         <form class="section__form">
+            <h2>Square calculator</h2>
             <label for="input_square_calculator">
                 Write each side measures of square
             </label>
@@ -32,21 +32,26 @@
             </button>
         </form>
 
-        <h2>Triangle calculator</h2>
         <form class="section__form">
-            <label for="input_triangle_calculator_foot">
-                Write measures of triangle
-            </label>
-            <input type="number" placeholder="foot..." id="input_triangle_calculator_foot"/> 
-            <input type="number" placeholder="side1..." id="input_triangle_calculator_side1"/>
-            <input type="number" placeholder="side2..." id="input_triangle_calculator_side2"/>
-            <input type="number" placeholder="heigth..." id="input_triangle_calculator_height"/>
-            <button type="button" onclick="perimeter_triangle_calculator()">
-                Perimeter
-            </button>
-            <button type="button" onclick="area_triangle_calculator()">
-                Area
-            </button>
+            <h2>Triangle calculator</h2>
+                <label for="input_triangle_calculator_foot">
+                    Write measures of triangle
+                </label>
+            <div class="section__form--content">
+                <input type="number" placeholder="foot..." id="input_triangle_calculator_foot"/> 
+                <input type="number" placeholder="side1..." id="input_triangle_calculator_side1"/>
+                <input type="number" placeholder="side2..." id="input_triangle_calculator_side2"/>
+                <input type="number" placeholder="heigth..." id="input_triangle_calculator_height"/>
+                <button type="button" onclick="perimeter_triangle_calculator()">
+                    Perimeter
+                </button>
+                <button type="button" onclick="area_triangle_calculator()">
+                    Area
+                </button>
+                <button type="button" onclick="heigth_triangle_calculator()">
+                    Heigth
+                </button>
+            </div>
         </form>
         
         <form class="section__form">
