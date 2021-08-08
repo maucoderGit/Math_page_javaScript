@@ -6,7 +6,7 @@ const circle_perimeter = (circle_radium) => PI * circle_radium * 2
 
 // height isosceles triangle
 
-const height_triangle_equilater = (sides) => Math.sqrt(3 * sides / 2)
+const height_triangle_equilater = (sides) => Math.sqrt(sides**2 - (sides / 2)**2)
 const height_triangle_isosceles = (long_side, short_side) => Math.sqrt(long_side**2 - (short_side / 2)**2);
 
 const square_area = (side) => side**2
