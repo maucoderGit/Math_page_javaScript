@@ -1,3 +1,5 @@
+const CUPONS = ["LICORESVE12","LABARTOLALIC","RON_Y_LICOR!","BEBE_Y_DISFRUTA"]
+
 function price_and_discounts_calculator(price, porcent){
     const discount = 100 - porcent;
     const formule = price * discount / 100;
