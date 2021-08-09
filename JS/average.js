@@ -4,6 +4,6 @@ function calcule_aritmetic_average(list){
     new_list += i
     }
 
-    const average_list = new_list / prices.length
+    const average_list = new_list / list.length
     return average_list
 }
