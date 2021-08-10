@@ -1,6 +1,6 @@
-const LIST = [100, 200, 500, 40000000];
+const LIST = [100, 200, 300, 500, 40000000];
 
-// const midleList = list.length / 2;
+const midle_list = parseInt(LIST.length / 2);
 
 function is_list_even(number){
     if (number % 2 === 0){
@@ -13,10 +13,10 @@ function is_list_even(number){
 
 let median;
 
-if (is_list_even(list.length)){
+if (is_list_even(LIST.length)){
     
 } 
 else 
-{
-    
+{  
+    median = LIST[midle_list];
 }
