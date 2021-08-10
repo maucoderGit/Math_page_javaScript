@@ -9,28 +9,35 @@ function calcule_aritmetic_average(list){
     return average_list
 }
 
-const LIST = [0 ,100, 200, 300, 500, 40000000];
+// const LIST = [0 ,100, 200, 300, 500, 40000000];
 
-const midle_list = parseInt(LIST.length / 2);
+function median_calcule(list){
+    list = list.sort((a,b) => a - b)
+    console.log(list)
 
-function is_list_even(number){
-    if (number % 2 === 0){
-        return true;
-    } 
-    else {
-        return false;
+    const midle_list = parseInt(list.length / 2);
+
+    function is_list_even(number){
+        if (number % 2 === 0){
+            return true;
+        } 
+        else {
+            return false;
+        }
     }
-}
 
-let median;
+    let median;
 
-if (is_list_even(LIST.length)){
-    const element1 = LIST[midle_list];
-    const element2 = LIST[midle_list - 1];
+    if (is_list_even(list.length)){
+        const element1 = list[midle_list - 1];
+        const element2 = list[midle_list];
 
-    median = calcule_aritmetic_average([element1, element2])
-} 
-else 
-{  
-    median = LIST[midle_list];
+        median = calcule_aritmetic_average([element1, element2])
+    } 
+    else 
+    {  
+        median = list[midle_list];
+    }
+
+    return median
 }
