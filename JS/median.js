@@ -1,4 +1,13 @@
-import { calcule_aritmetic_average } from './average';
+function calcule_aritmetic_average(list){
+    const sum_list = list.reduce(
+        (value_acumulated = 0, new_lement) => {
+            return value_acumulated + new_lement    
+        }
+    ) 
+
+    const average_list = sum_list / list.length
+    return average_list
+}
 
 const LIST = [0 ,100, 200, 300, 500, 40000000];
 
@@ -17,10 +26,9 @@ let median;
 
 if (is_list_even(LIST.length)){
     const element1 = LIST[midle_list];
-    const element2 = LIST[midle_list + 1];
-    console.log(`elements are: ${element1} and ${element2}`)
+    const element2 = LIST[midle_list - 1];
 
-    calcule_aritmetic_average([element1, element2])
+    median = calcule_aritmetic_average([element1, element2])
 } 
 else 
 {  
