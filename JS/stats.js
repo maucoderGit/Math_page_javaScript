@@ -14,10 +14,10 @@ function send_data(){
     const input4 = document.getElementById("array_data4");
 
     const values = {
-    value1 : input1.value,
-    value2 : input2.value,
-    value3 : input3.value,
-    value4 : input4.value,
+    value1 : Number(input1.value),
+    value2 : Number(input2.value),
+    value3 : Number(input3.value),
+    value4 : Number(input4.value),
     }
 
     const list = Object.values(values)
@@ -30,15 +30,15 @@ function send_data(){
 
 // merge median.js 
 
-function calcule_aritmetic_average(list = send_data()){
-    const new_list = list
+function calcule_aritmetic_average(){
+    const new_list = send_data()
     const sum_list = new_list.reduce(
         (value_acumulated = 0, new_lement) => {
             return value_acumulated + new_lement    
         }
     ) 
 
-    const average_list = sum_list / list.length
+    const average_list = sum_list / new_list.length
 
     const array = document.getElementById("answer_average");
     array.innerText = "Your array is " + average_list;
@@ -47,8 +47,9 @@ function calcule_aritmetic_average(list = send_data()){
     return average_list
 }
 
-function median_calcule(list){
-    list = list.sort((a,b) => a - b)
+function median_calcule(){
+    const new_list = send_data()
+    const list = new_list.sort((a,b) => a - b)
     const midle_list = parseInt(list.length / 2);
 
     function is_list_even(number){
@@ -82,29 +83,31 @@ function sum_fractions(numerator_a,denominator_a = 1,numerator_b = 1,denominator
     console.log(result)
 }
 
-function armonic_median_calculator(list){
-    list = list.sort((previus_element, new_element) => previus_element - new_element)
+function armonic_median_calculator(){
+    const new_list = send_data()
+    const list = new_list.sort((previus_element, new_element) => previus_element - new_element)
     const list_elements = list.length;
     const reducer = (element_a,element_b) => sum_fractions(1, element_a, 1, element_b)
     console.log(list_elements)
   
     const sum_all_values = list.reduce(reducer)
-    console.log(sum_all_values)
 
     const armonic_median = list_elements / sum_all_values
 
     const array = document.getElementById("answer_armonic");
-    array.innerText = "Your array is " + median;
+    array.innerText = "Your array is " + armonic_median;
 
     return armonic_median
 }
 
 // mode calculer
 
-function mode_calcule(list){
+function mode_calcule(){
+    let new_list = send_data()
     let list_counter = {};
 
-    list.map(
+
+    new_list.map(
         function (element){
             if (list_counter[element]){
                 list_counter[element] += 1;
@@ -133,16 +136,16 @@ function mode_calcule(list){
 
 // Average calculer
 
-function calcule_aritmetic_average(list){
-    const sum_list = list.reduce(
-        (value_acumulated = 0, new_lement) => {
-            return value_acumulated + new_lement    
-        }
-    ) 
+// function calcule_aritmetic_average(){
+//     const sum_list = list.reduce(
+//         (value_acumulated = 0, new_lement) => {
+//             return value_acumulated + new_lement    
+//         }
+//     ) 
 
-    const average_list = sum_list / list.length
+//     const average_list = sum_list / list.length
     
-    const array = document.getElementById("answer_average");
-    array.innerText = "Your array is " + average_list;
-    return average_list
-}
+//     const array = document.getElementById("answer_average");
+//     array.innerText = "Your array is " + average_list;
+//     return average_list
+// }
