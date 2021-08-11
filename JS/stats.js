@@ -82,4 +82,30 @@ function armonic_median_calculator(list){
     return armonic_median
 }
 
+// mode calculer
 
+function mode_calcule(list){
+    let list_counter = {};
+
+    list.map(
+        function (element){
+            if (list_counter[element]){
+                list_counter[element] += 1;
+            } 
+            else
+            {
+            list_counter[element] = 1;
+            }
+        }
+    );
+
+
+    const list_array = Object.entries(list_counter).sort(
+        function (acumulated_value, new_value){
+            return acumulated_value[1] - new_value[1]
+        }
+    );
+
+    const mode = list_array[list_array.length -1]
+    console.log(mode)
+}
