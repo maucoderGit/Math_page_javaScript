@@ -28,13 +28,11 @@ function send_data(){
     return list
 }
 
-let list = send_data();
-
-
 // merge median.js 
 
-function calcule_aritmetic_average(list){
-    const sum_list = list.reduce(
+function calcule_aritmetic_average(list = send_data()){
+    const new_list = list
+    const sum_list = new_list.reduce(
         (value_acumulated = 0, new_lement) => {
             return value_acumulated + new_lement    
         }
