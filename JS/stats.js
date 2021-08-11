@@ -1,5 +1,10 @@
 function reset_list(){
-    return list = []
+    const list = []
+    
+    const array = document.getElementById("array_input");
+    array.innerText = "Your array is empty";
+
+    return list
 }
 
 function send_data(){
