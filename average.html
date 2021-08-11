@@ -38,11 +38,25 @@
             <button type="submit" onclick="reset_list()">Reset List</button>
             <p id="array_input"></p>
         </div>
-        <div class="container__paragraph">
-            <button type="submit" onclick="calcule_aritmetic_average">Average</button>
-            <button type="submit" onclick="median_calcule">Median</button>
-            <button type="submit" onclick="armonic_median_calculator">Armonic median</button>
-            <button type="submit" onclick="mode_calcule">Mode</button>
+
+
+        <div class="container__options">
+            <div class="container__options--paragraph">
+                <button type="submit" onclick="calcule_aritmetic_average()">Average</button>
+                <p id="answer_average"></p>
+            </div>
+            <div class="container__options--paragraph">
+                <button type="submit" onclick="median_calcule()">Median</button>
+                <p id="answer_median"></p>
+            </div>
+            <div class="container__options--paragraph">
+                <button type="submit" onclick="armonic_median_calculator()">Armonic median</button>
+                <p id="answer_armonic"></p>
+            </div>
+            <div class="container__options--paragraph">
+                <button type="submit" onclick="mode_calcule()">Mode</button>
+                <p id="answer_mode"></p>
+            </div>
         </div>
     </section>
     <script src="JS/stats.js"></script>

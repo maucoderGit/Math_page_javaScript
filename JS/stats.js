@@ -30,6 +30,7 @@ function send_data(){
 
 let list = send_data();
 
+
 // merge median.js 
 
 function calcule_aritmetic_average(list){
@@ -40,6 +41,11 @@ function calcule_aritmetic_average(list){
     ) 
 
     const average_list = sum_list / list.length
+
+    const array = document.getElementById("answer_average");
+    array.innerText = "Your array is " + average_list;
+
+    console.log(average_list)
     return average_list
 }
 
@@ -88,6 +94,10 @@ function armonic_median_calculator(list){
     console.log(sum_all_values)
 
     const armonic_median = list_elements / sum_all_values
+
+    const array = document.getElementById("answer_armonic");
+    array.innerText = "Your array is " + median;
+
     return armonic_median
 }
 
@@ -116,7 +126,11 @@ function mode_calcule(list){
     );
 
     const mode = list_array[list_array.length -1]
-    console.log(mode)
+
+    const array = document.getElementById("answer_mode");
+    array.innerText = "Your array is " + mode;
+
+    return mode;
 }
 
 // Average calculer
@@ -129,5 +143,8 @@ function calcule_aritmetic_average(list){
     ) 
 
     const average_list = sum_list / list.length
+    
+    const array = document.getElementById("answer_average");
+    array.innerText = "Your array is " + average_list;
     return average_list
 }
