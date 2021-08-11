@@ -13,8 +13,37 @@
         <h1>Average, Median & Mode calculator</h1>
     </header>
     
-    <section class="calculator">
+    <nav class="navbar">
+        <ul class="list__inline">
+            <li class="list__inline--item">
+                list
+            </li>
+        </ul>
+    </nav>
 
+    <section class="container">
+        <div class="container__form">
+            <div class="container__form--group">
+                <input type="number" name="data[]"
+                placeholder="Insert list" id="array_data">
+            </div>
+            
+            <div class="form__group">
+                <input type="number" name="data[]"
+                placeholder="Insert list" id="array_data">
+            </div>
+            
+            <div class="form__group">
+                <input type="number" name="data[]"
+                placeholder="Insert list" id="array_data">
+            </div>
+            
+            <div class="form__group">
+                <input type="number" name="data[]"
+                placeholder="Insert list" id="array_data">
+            </div>
+            <button type="submit" onclick="send_data()">Create New List</button>
+        </div>
     </section>
     <script src="JS/median.js"></script>
     <script src="JS/average.js"></script>
