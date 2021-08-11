@@ -1,4 +1,4 @@
-const list = [1,2,3,4,1,2,4,3,2,1,1,1,3,5,6,89,9,123,312];
+// const list = [1,2,3,4,1,2,4,3,2,1,1,1,3,5,6,89,9,123,312];
 
 function mode_calcule(list){
     let list_counter = {};
