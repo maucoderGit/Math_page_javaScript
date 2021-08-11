@@ -16,7 +16,11 @@ function send_data(){
     }
 
     const list = Object.values(values)
-    console.log(list)
+
+    const array = document.getElementById("array_input");
+    array.innerText = "Your array is " + list;
+
+    return list
 }
 
 let list = send_data();
@@ -108,4 +112,17 @@ function mode_calcule(list){
 
     const mode = list_array[list_array.length -1]
     console.log(mode)
+}
+
+// Average calculer
+
+function calcule_aritmetic_average(list){
+    const sum_list = list.reduce(
+        (value_acumulated = 0, new_lement) => {
+            return value_acumulated + new_lement    
+        }
+    ) 
+
+    const average_list = sum_list / list.length
+    return average_list
 }
