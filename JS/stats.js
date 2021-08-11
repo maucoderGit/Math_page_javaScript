@@ -72,22 +72,25 @@ function median_calcule(){
         median = list[midle_list];
     }
 
+    const array = document.getElementById("answer_median");
+    array.innerText = "Your array is " + median;
+
     return median
 }
 
 // Armonic median is used to calcule velocities, is used in some areas. 
 
-function sum_fractions(numerator_a,denominator_a = 1,numerator_b = 1,denominator_b = 1){
-    let result = ((numerator_a * denominator_b) + (denominator_a * numerator_b) 
-                / (denominator_a * denominator_b))
-    console.log(result)
-}
+// function sum_fractions(numerator_a,denominator_a = 1,numerator_b = 1,denominator_b = 1){
+//     let result = ((numerator_a * denominator_b) + (denominator_a * numerator_b) 
+//                 / (denominator_a * denominator_b))
+//     console.log(result)
+// }
 
 function armonic_median_calculator(){
     const new_list = send_data()
     const list = new_list.sort((previus_element, new_element) => previus_element - new_element)
     const list_elements = list.length;
-    const reducer = (element_a,element_b) => sum_fractions(1, element_a, 1, element_b)
+    const reducer = (element_a,element_b) => 1/element_a + 1/element_b
     console.log(list_elements)
   
     const sum_all_values = list.reduce(reducer)
