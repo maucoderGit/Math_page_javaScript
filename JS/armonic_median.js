@@ -1,5 +1,3 @@
-const LIST = [9,4,6,8,8,12];
-
 // Armonic median is used to calcule velocities, is used in some areas. 
 
 function sum_fractions(numerator_a,denominator_a = 1,numerator_b = 1,denominator_b = 1){
