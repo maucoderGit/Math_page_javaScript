@@ -17,11 +17,12 @@ function armonic_median_calculator(list){
             element_a + 1 / element_b
         })
 
-    
+    const armonic_median = list_elements / sum_all_values
+    console.log(armonic_median)
 }
 
 //     const armonic_median = list_elements / value
 // }
 
 // fraction_calculetor(LIST)
-// armonic_median_calculator(LIST)
+armonic_median_calculator(LIST)
