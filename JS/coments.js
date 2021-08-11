@@ -80,3 +80,12 @@
 // console.log("circle's area is " + circle_area + "cmˆ2")
 
 // console.groupEnd();
+
+// function fraction_calculetor(list){
+//     let value = 0;
+
+//     for(i of list){
+//         value += 1/i;
+//     }
+//     console.log(value)
+// }
