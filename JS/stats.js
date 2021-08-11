@@ -1,7 +1,3 @@
-function reset_list(list){
-    return list = []
-}
-
 function send_data(){
     let array_input = new Array();
 
@@ -20,11 +16,8 @@ function send_data(){
     value4 : input4.value,
     }
 
-    const list = array_input.map.call(values, function(data_input){
-        array_input.push(data_input.value);
-        });
-    console.log(array_input)
-    return array_input;
+    const list = Object.values(values)
+    console.log(list)
 }
 
 let list = send_data();
