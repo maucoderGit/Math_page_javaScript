@@ -40,4 +40,4 @@ function median_salaries(list){
     }
 }
 
-console.log(median_salaries(salaries_sorted))
+const median_general = median_salaries(salaries_sorted)
