@@ -62,5 +62,5 @@ const median_top10 = median_salaries(salaries_top10)
 
 console.log({
     median_general,
-    medianTop10
+    median_top10
 })
