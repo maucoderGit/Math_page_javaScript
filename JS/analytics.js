@@ -58,7 +58,9 @@ const salaries_top10 = salaries_sorted.splice(
     splice_start, splice_count
 )
 
+const median_top10 = median_salaries(salaries_top10)
+
 console.log({
     median_general,
-    medianTop10,
+    medianTop10
 })
