@@ -11,5 +11,7 @@ const salaries_sorted = salaries.sort(
 );
 
 function is_even(number){
-    if (number % 2 === 0);
+    return (number % 2 === 0);
 }
+
+funtion
