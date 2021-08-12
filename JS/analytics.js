@@ -29,13 +29,13 @@ function median_salaries(list){
     const midle = parseInt(list.length / 2)
     
     if (is_even(list.length)) {
-        const midle_citizen1 = list(midle - 1);
-        const midle_citizen2 = list(midle);
+        const midle_citizen1 = list[midle - 1];
+        const midle_citizen2 = list[midle];
 
         const median = calcule_aritmetic_average([midle_citizen1, midle_citizen2])
         return median
     } else {
-        const midle_citizen = list(midle);
+        const midle_citizen = list[midle];
         return midle_citizen
     }
 }
